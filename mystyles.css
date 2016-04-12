@@ -10,6 +10,11 @@ a:hover {
   color: #31b0d5;
 }
 
+h2 {
+  font-size: 25px;
+  color: #00ff00;
+}
+
 p {
   font-size: 18px;
   font-weight: 300;
