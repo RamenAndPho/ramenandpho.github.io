@@ -1,0 +1,21 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #5bc0de;
+}
+
+a:hover {
+  color: #31b0d5;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFFFFF;
+
+  a {
+    font-weight: 400;
+  }
+}
