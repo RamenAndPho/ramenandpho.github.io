@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>RamenAndPho</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="mystyles.css" media="screen">
-</head>
-<body>
+---
+layout: default
+---
 
-<div class="container">
-  <h1>Ramen And Pho</h1>
-  <p>This is some text.</p>
-  <h2>color text.</h2>
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
 </div>
-
-<div id="pressimages" class="row">
-  <div class="col-md-4 col-sm-4 hidden-xs">
-    <img class="img-responsive" src="//torontolife.com/wp-content/uploads/2012/11/nov12-santouka-16.jpg" />
-  </div>
-  <div class="col-md-4 col-sm-4 col-xs-12">
-    <img class="img-responsive" src="//www.chopsticksny.com/contents/wp-content/uploads/0913_IPPUDOWest_main.jpg" />
-  </div>
-  <div class="col-md-4 col-sm-4 hidden-xs">
-    <img class="img-responsive" src="//4.bp.blogspot.com/-_IqlSIkc4s8/T8YQ5blzFsI/AAAAAAAAAOw/dLJYi59ZvSY/s1600/DSCN1811.JPG" />
-  </div>
-</div>
-
-
-</body>
-</html>
